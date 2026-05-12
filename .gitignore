@@ -1,0 +1,30 @@
+# Arquivo de dados do sistema (contém dados bancários de teste)
+bank_data.json
+
+# Arquivos Python gerados automaticamente
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ambientes virtuais Python
+venv/
+env/
+.env
+.venv
+myenv/
+
+# Configurações do VS Code
+.vscode/
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Arquivos de log
+*.log
+
+# Arquivos de backup
+*.bak
+*.tmp
