@@ -1,131 +1,124 @@
-# 🏦 Bank System Python
+# 🏦 Bank Tognela System
 
-Sistema bancário interativo via terminal desenvolvido como projeto de aprendizado em Engenharia de Software.
+Sistema bancário completo desenvolvido como projeto de portfólio em Engenharia de Software.
 
 ## 📋 Funcionalidades
 
-- ✅ Criar conta com validação de CPF e email
-- ✅ Depósito com registro de transação
-- ✅ Saque com verificação de saldo
-- ✅ Consulta de saldo
-- ✅ Extrato detalhado com data/hora
-- ✅ Persistência de dados em JSON
-- ✅ Menu interativo via terminal
+### Versão Terminal (MVP)
+- ✅ Criar conta com validação de CPF, email e maioridade
+- ✅ Autenticação com senha
+- ✅ Depósito e saque
+- ✅ Transferência entre contas
+- ✅ Sistema de empréstimo com juros
+- ✅ Extrato detalhado
+- ✅ Persistência em JSON
+
+### Versão API REST
+- ✅ Criar conta via POST
+- ✅ Autenticação via POST
+- ✅ Consultar saldo via GET
+- ✅ Depósito e saque via POST
+- ✅ Transferência via POST
+- ✅ Empréstimo via POST
+- ✅ Extrato via GET
+- ✅ Documentação automática com Swagger
 
 ## 🏗️ Estrutura do Projeto
- 
- bank-system-python/ 
-  |--- main.py
-  |--- README.MD
-  |--- .gitignore
-  |--- src/
-  |--- models/
-  | '--- account.py
-  |--- services/
-  | '--- banking_service.py
-  |--- utils/
-  |--- menu.py
-  |--- storage.py
-  |--- Validators.py
 
-  
+bank-system-python/
+├── main.py
+├── api.py
+├── README.md
+├── .gitignore
+├── requirements.txt
+└── src/
+    ├── models/
+    │   └── account.py
+    ├── services/
+    │   └── banking_service.py
+    └── utils/
+        ├── menu.py
+        ├── api_routes.py
+        ├── storage.py
+        └── validators.py
+
+        
 ## 🚀 Como Executar
 
-1. Clone o repositório:
+### Versão Terminal
 ```bash
 git clone https://github.com/Tognela/bank-system-python.git
 cd bank-system-python
-
-#EXECUTE O SISTEMA:
 python main.py
 
-💡 Funcionalidades Detalhadas
+### VERSÃO API REST
 
-Criar Conta
+pip install fastapi uvicorn
+python api.py
 
-Validação de CPF com algoritmo oficial
+-> Acesse a documentação em: http://localhost:8000/docs <-
 
-Validação de formato de email
+|| -> 📚 Endpoints da API <- ||
 
-Nome com no mínimo 3 caracteres
+Método	  ||    Rota	      ||       Descrição
+POST	        // contas	         // Criar nova conta
+POST	        // login	         // Autenticar usuário
+GET	          // saldo	         // Consultar saldo
+POST        	// deposito	       // Realizar depósito
+POST	        // saque	         // Realizar saque
+POST	        // transferencia   // Transferir entre contas
+POST	        // emprestimo	     // Solicitar empréstimo
+GET	          // extrato         // Consultar extrato
 
-Depósito -'-
+|| -> 🛠️ Tecnologias <- ||
 
-Aceita valores com vírgula ou ponto
+|| Python 3
 
-Registra data e hora da transação
+|| FastAPI
 
-Valor máximo de R$ 1.000.000,00
+|| Git/GitHub
 
-Saque -'-
+|| JSON
 
-Verifica saldo disponível
+|| Uvicorn
 
-Impede saque maior que o saldo
+|| -> 💡 Aprendizados <- ||
 
-Registra no extrato
+-> Estrutura profissional de projeto
 
-Extrato -'- 
+-> Programação orientada a objetos
 
-Exibe todas as transações
+-> Separação de responsabilidades
 
-Mostra data, hora e tipo
+-> Validação de dados reais
 
-Saldo atualizado
+-> Persistência em arquivo
 
-Persistência -'-
+-> Versionamento com Git
 
-Salva automaticamente ao sair
+-> API REST com FastAPI
 
-Carrega dados ao iniciar
+-> Documentação Swagger
 
-Arquivo JSON local
+|| -> 🔜 Próximos Passos <- ||
 
-🛠️ Tecnologias Utilizadas
+-> Substituir JSON por PostgreSQL
 
-Python 3
+-> Deploy na nuvem (Railway/Render)
 
-Git e GitHub
+-> Autenticação com JWT
 
-JSON para armazenamento
+-> Testes automatizados com pytest
 
-VS Code
+-> Container Docker
 
-📚 Aprendizados
+|| -> 👤 Autor <- ||
 
-Este projeto foi desenvolvido para praticar:
+-> Gustavo Tognela
 
-Estrutura profissional de projeto Python
+-> GitHub: Tognela
 
-Programação orientada a objetos
+-> Email: gustavo.tognella@gmail.com
 
-Separação de responsabilidades (Models, Services, Utils)
+|| -> Projeto em constante evolução como parte da jornada de aprendizado em Engenharia de Software.||
 
-Validação de dados
-
-Persistência em arquivo
-
-Controle de versão com Git
-
-Conventional Commits
-
-Documentação de projeto
-
-🔜 Próximos Passos
-
-Substituir JSON por banco de dados SQLite
-
-Criar API REST com FastAPI
-
-Adicionar autenticação de usuários
-
-Implementar transferências entre contas
-
-Criar testes automatizados com pytest
-
-Interface gráfica ou web
-
-👤 Autor
-[GUSTAVO TOGNELA]
-
-Desenvolvido como parte da jornada de aprendizado em Engenharia de Software.
