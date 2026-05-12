@@ -14,14 +14,15 @@ Sistema bancário completo desenvolvido como projeto de portfólio em Engenharia
 - ✅ Persistência em JSON
 
 ### Versão API REST
-- ✅ Criar conta via POST
-- ✅ Autenticação via POST
-- ✅ Consultar saldo via GET
-- ✅ Depósito e saque via POST
-- ✅ Transferência via POST
-- ✅ Empréstimo via POST
-- ✅ Extrato via GET
-- ✅ Documentação automática com Swagger
+- ✅ Criar conta via POST /contas
+- ✅ Autenticação via POST /login
+- ✅ Consultar saldo via GET /saldo
+- ✅ Depósito via POST /deposito
+- ✅ Saque via POST /saque
+- ✅ Transferência via POST /transferencia
+- ✅ Empréstimo via POST /emprestimo
+- ✅ Extrato via GET /extrato
+- ✅ Documentação automática com Swagger em /docs
 
 ## 🏗️ Estrutura do Projeto
 
@@ -42,83 +43,67 @@ bank-system-python/
         ├── storage.py
         └── validators.py
 
-        
 ## 🚀 Como Executar
 
 ### Versão Terminal
-```bash
 git clone https://github.com/Tognela/bank-system-python.git
 cd bank-system-python
 python main.py
 
-### VERSÃO API REST
-
+### Versão API REST
 pip install fastapi uvicorn
 python api.py
 
--> Acesse a documentação em: http://localhost:8000/docs <-
+Acesse: http://localhost:8000/docs
 
-|| -> 📚 Endpoints da API <- ||
+## 📚 Endpoints da API
 
-Método	  ||    Rota	      ||       Descrição
-POST	        // contas	         // Criar nova conta
-POST	        // login	         // Autenticar usuário
-GET	          // saldo	         // Consultar saldo
-POST        	// deposito	       // Realizar depósito
-POST	        // saque	         // Realizar saque
-POST	        // transferencia   // Transferir entre contas
-POST	        // emprestimo	     // Solicitar empréstimo
-GET	          // extrato         // Consultar extrato
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| POST | /contas | Criar nova conta |
+| POST | /login | Autenticar usuário |
+| GET | /saldo | Consultar saldo |
+| POST | /deposito | Realizar depósito |
+| POST | /saque | Realizar saque |
+| POST | /transferencia | Transferir entre contas |
+| POST | /emprestimo | Solicitar empréstimo |
+| GET | /extrato | Consultar extrato |
 
-|| -> 🛠️ Tecnologias <- ||
+## 🛠️ Tecnologias Utilizadas
 
-|| Python 3
+- Python 3
+- FastAPI
+- Uvicorn
+- Pydantic
+- Git e GitHub
+- JSON para armazenamento
+- VS Code
 
-|| FastAPI
+## 💡 Aprendizados
 
-|| Git/GitHub
+- Estrutura profissional de projeto Python
+- Programação orientada a objetos
+- Separação de responsabilidades (Models, Services, Utils)
+- Validação de dados reais (CPF, email, idade)
+- Persistência em arquivo JSON
+- Controle de versão com Git e Conventional Commits
+- API REST com FastAPI
+- Documentação automática com Swagger
 
-|| JSON
+## 🔜 Próximos Passos
 
-|| Uvicorn
+- Substituir JSON por banco de dados PostgreSQL
+- Autenticação com JWT
+- Deploy na nuvem (Railway/Render)
+- Testes automatizados com pytest
+- Container Docker
 
-|| -> 💡 Aprendizados <- ||
+## 👤 Autor
 
--> Estrutura profissional de projeto
+Gustavo Tognela
+- GitHub: Tognela (https://github.com/Tognela)
+- Email: gustavo.tognella@gmail.com
 
--> Programação orientada a objetos
+---
 
--> Separação de responsabilidades
-
--> Validação de dados reais
-
--> Persistência em arquivo
-
--> Versionamento com Git
-
--> API REST com FastAPI
-
--> Documentação Swagger
-
-|| -> 🔜 Próximos Passos <- ||
-
--> Substituir JSON por PostgreSQL
-
--> Deploy na nuvem (Railway/Render)
-
--> Autenticação com JWT
-
--> Testes automatizados com pytest
-
--> Container Docker
-
-|| -> 👤 Autor <- ||
-
--> Gustavo Tognela
-
--> GitHub: Tognela
-
--> Email: gustavo.tognella@gmail.com
-
-|| -> Projeto em constante evolução como parte da jornada de aprendizado em Engenharia de Software.||
-
+Projeto em constante evolução como parte da jornada de aprendizado em Engenharia de Software.
